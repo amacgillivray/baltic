@@ -2,6 +2,7 @@
 
 @import "baltic/color";
 @import "baltic/layout";
+@import "baltic/rouge-nord";
 
 html {
     font-family: "Jetbrains Mono", "Courier New", monospace;
@@ -60,14 +61,4 @@ h1 {
         max-width: 100%;
         border-radius: 12px;
     }
-}
-
-pre.highlight {
-    background-color: $kaliningrad;
-    color: $body;
-    border-radius: 12px;
-    padding: 10px;
-    box-sizing: border-box;
-    max-width: 120ch;
-    overflow-x:scroll;
 }

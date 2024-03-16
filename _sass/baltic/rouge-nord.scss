@@ -1,0 +1,100 @@
+.highlight {
+
+    background-color: $nord;
+    color: $body;
+    border-radius: 12px;
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 90ch;
+    overflow-x:scroll;
+    margin: 20px 0;
+
+    .hll {
+        background-color: $waves;
+    }
+
+    .c,
+    .ch,
+    .cm,
+    .cp,
+    .cpf,
+    .c1 {
+        color: $kihnu;
+    }
+    .cs {
+        color: $vilnius;
+        font-weight: 700;
+    }
+
+    .err {
+
+    }
+
+    .esc {
+
+    }
+
+    .g,
+    .p,
+    .l,
+    .x {
+        color: $titles;
+    }
+
+    .k {
+        color: $gotland;
+        font-weight: 700;
+    }
+
+    .l,
+    .sa,
+    .sb,
+    .sc,
+    .dl,
+    .sd,
+    .s2,
+    .se,
+    .sh,
+    .si,
+    .sx,
+    .sr,
+    .s1,
+    .ss {
+        color: $gothenburg;
+    }
+
+    .m,
+    .mb,
+    .mf,
+    .mh,
+    .mi,
+    .mo,
+    .il {
+        color: $dainava;
+    }
+
+    .n,
+    .vc,
+    .vg,
+    .vi,
+    .vm {
+        color: $sarek;
+    }
+    
+    .nc {
+        color: $stockholm;
+    }
+
+    .nf {
+        color: $vilnius;
+    }
+
+    .kd {
+        color: $helsinki;
+    }
+
+    .o {
+        color: $stockholm;
+    }
+
+}
