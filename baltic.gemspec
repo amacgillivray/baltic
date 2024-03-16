@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
     s.summary = "A Nord-inspired Jekyll theme for developer blogs."
     s.description = <<~DESC
         A personal blog theme styled for developers. 
-        Inspired by popular "Nord" IDE and terminal themes, my adventures in Canada, and the Baltic & Nordic regions where I dream to go.
+        Inspired by popular "Nord" IDE and terminal themes.
     DESC
 
     # About
