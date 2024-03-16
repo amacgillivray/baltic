@@ -5,6 +5,8 @@
 
     <body class="{{ page.colorset | default: site.colorset | default: "normal" }}">
 
+        {%- include header.html -%}
+
         {{content}}
 
     </body>
