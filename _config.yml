@@ -1,0 +1,17 @@
+title: Another Baltic Blog
+author:
+  name: Your Name
+  email: you@example.com
+
+theme: baltic
+colorset: light
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: html
+    css_class: 'syntax'
