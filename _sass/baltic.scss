@@ -6,3 +6,68 @@
 html {
     font-family: "Jetbrains Mono", "Courier New", monospace;
 }
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $seafloor;
+    color: $body;
+
+    &.light {
+        background-color: $titles;
+        color: $body_dark;
+    }
+}
+
+h1 {
+    font-weight: 900;
+    color: $gotland;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 40px $pad_h;
+    background-color: $baltic;
+    border-bottom:4px solid #222d36;
+
+    .header-title-link {
+        font-weight: 700;
+        color: $body;
+        text-decoration: none;
+        transition: 0.2s;
+
+        &:hover {
+            color: $riga;
+        }
+    }
+}
+
+.content-area {
+    display: block;
+    max-width: calc(100vw - $pad_h);
+    margin: 40px $pad_h;
+
+    p {
+        max-width: 90ch;
+    }
+
+    img {
+        max-width: 100%;
+        border-radius: 12px;
+    }
+}
+
+pre.highlight {
+    background-color: $kaliningrad;
+    color: $body;
+    border-radius: 12px;
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 120ch;
+    overflow-x:scroll;
+}
