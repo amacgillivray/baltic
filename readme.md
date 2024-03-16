@@ -1,6 +1,6 @@
 # Baltic
 
-![Example index file](./screenshot.jpg)
+![Example index file](./screenshot.png)
 
 Baltic is a Jekyll theme inspired by the popular Nord color theme. 
 
