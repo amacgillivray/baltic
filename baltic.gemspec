@@ -6,6 +6,7 @@ Gem::Specification.new do |s|
     s.version = "0.0.0"
     s.description = ""
     s.email = "agjmacgill@gmail.com"
+    s.homepage = "https://github.com/amacgillivray/baltic"
     s.license = "MIT"
     s.required_ruby_version = ">= 3.0.0"
 end
