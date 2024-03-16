@@ -29,9 +29,13 @@ h1 {
     color: $gotland;
 }
 
+a {
+    text-decoration: none;
+}
+
 .header {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto auto;
     padding: 40px $pad_h;
     background-color: $baltic;
     border-bottom:4px solid #222d36;
@@ -39,11 +43,25 @@ h1 {
     .header-title-link {
         font-weight: 700;
         color: $body;
-        text-decoration: none;
         transition: 0.2s;
 
         &:hover {
             color: $riga;
+        }
+    }
+
+    .header-nav {
+
+    }
+
+    .header-nav-link {
+        margin: 0 20px;
+        font-weight: 500;
+        color: $vilnius;
+        transition: 0.2s;
+
+        &:hover {
+            color: $dainava;
         }
     }
 }

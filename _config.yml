@@ -6,6 +6,11 @@ author:
 theme: baltic
 colorset: light
 
+# List of pages to link in the header menu
+# Can be left empty.
+header_pages: 
+
+
 markdown: kramdown
 highlighter: rouge
 kramdown:
