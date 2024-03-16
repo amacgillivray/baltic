@@ -10,14 +10,19 @@ Gem::Specification.new do |s|
     s.summary = "A Nord-inspired Jekyll theme for developer blogs."
     s.description = <<~DESC
         A personal blog theme styled for developers. 
-        Inspired by popular "Nord" IDE and terminal themes.
+        Inspired by popular "Nord" IDE and terminal themes, my adventures in Canada, and the Baltic & Nordic regions I hope to someday visit.
     DESC
 
     # About
     # -----
-    s.version = "0.0.0"
+    s.version = "0.0.1"
     s.license = "MIT"
-    
+    s.metadata = {
+        "bug_tracker_uri"   => "https://github.com/amacgillivray/baltic/issues",
+        "homepage_uri"      => "https://github.com/amacgillivray/baltic",
+        "source_code_uri"   => "https://github.com/amacgillivray/baltic",
+    }
+
     # Technical
     # ---------
     file_patterns = %r{^(_(includes|layouts|sass)|(assets)/|(license|readme)((\.txt|\.md)|$))}
