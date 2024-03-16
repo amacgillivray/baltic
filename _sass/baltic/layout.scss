@@ -21,3 +21,21 @@ h1 {
     font-weight: 900;
 }
 
+.header {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 40px $pad_h;
+    background-color: $baltic;
+    border-bottom:4px solid #222d36;
+
+    .header-title-link {
+        font-weight: 700;
+        color: $body;
+        text-decoration: none;
+        transition: 0.2s;
+
+        &:hover {
+            color: $riga;
+        }
+    }
+}
