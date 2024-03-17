@@ -1,0 +1,14 @@
+
+<figure class="video">
+    <video controls>
+    {%- assign sources = include.source_list | split: "," -%}
+    {%- for source in sources -%}
+        <source src="{{ source | uri_escape }}" type="">
+    {%- endfor -%}
+    </video>
+    {%- if include.caption != "" -%}
+    <figcaption>
+        {{include.caption}}
+    </figcaption>
+    {%- endif -%}
+</figure>
