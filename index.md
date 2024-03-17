@@ -9,7 +9,43 @@ permalink: index.html
 
 Baltic is a code-centric Jekyll theme, heavily inspired by the Nord color theme.
 
+---
+
+## *\_includes* Elements
+
+### Embeddable **Video**
+
+{%- include embed-video.html 
+    source_list="https://i.imgur.com/G4a8ZW6.mp4" 
+    caption="An excursion in Muskoka.<br/> Add multiple sources with comma separators.<br/>Leave caption empty to omit." -%}
+
+{%- include embed-video.html 
+    source_list="https://i.imgur.com/LWizlJu.mp4" 
+    caption="" -%}
+
+### Captioned **Images** 
+
+{% comment %}
+To-Do: add a size parameter that adds one of three css classes (that can be overriden by users)
+{% endcomment %}
+
+{%- include embed-image.html 
+    source="https://i.imgur.com/ma0fHrn.png"
+    caption="Lake Ontario" -%}
+
+{%- include embed-image.html 
+    source="https://i.imgur.com/8zIBlRj.png"
+    caption="Lake Muskoka" -%}
+
+{% comment %}
+### Media **Galleries** 
+To-Do.
+{% endcomment %}
+
+--- 
+
 ## **Nord-Style** Syntax Highlighting
+Accomplished with Rouge.
 
 ```js
 // Example JavaScript
