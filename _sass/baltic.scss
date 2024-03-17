@@ -29,8 +29,22 @@ h1 {
     color: $gotland;
 }
 
+h3 {
+    font-weight: 200;
+}
+
+strong { 
+    font-weight: 900;
+}
+
 a {
     text-decoration: none;
+}
+
+hr {
+    color: $vilnius;
+    max-width: 90ch;
+    margin: 40px 0;
 }
 
 .header {
@@ -75,6 +89,20 @@ a {
         max-width: 90ch;
     }
 
+    figure {
+        margin: 0;
+        
+        figcaption {
+            margin: 10px 0 20px $border_radius;
+            padding: $border_radius;
+            border-left: 4px solid $riga;
+            font-size: 0.85em;
+            font-style: italic;
+            color: $tallinn;
+        }
+    }
+
+    video,
     img {
         max-width: 100%;
         border-radius: 12px;
