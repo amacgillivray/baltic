@@ -1,8 +1,18 @@
 # Baltic
 
-![Example index file](./screenshot.png)
-
 Baltic is a Jekyll theme inspired by the popular Nord color theme. 
+
+## Features
+
+![Video Embedding](./baltic-video-embed.png)
+
+![Captioned Images](./baltic-image-captions.png)
+
+![Nord-Color Syntax Highlighting](./baltic-syntax-highlighting.png)
+
+## Example Site
+
+![Example index file](./screenshot.png)
 
 ## Installation
 
