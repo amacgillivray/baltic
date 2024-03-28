@@ -15,11 +15,11 @@ body {
 }
 
 body {
-    background-color: $seafloor;
+    background-color: $waves;
     color: $body;
 
     &.light {
-        background-color: $titles;
+        background-color: $nord_snow_med;
         color: $body_dark;
     }
 }
