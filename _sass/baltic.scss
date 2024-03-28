@@ -111,3 +111,53 @@ hr {
         border-radius: 12px;
     }
 }
+
+.publication {
+    font-size: smaller;
+
+    .pub-title,
+    .pub-date,
+    .pub-meta_special,
+    .pub-venue_name,
+    .pub-meta-num {
+        font-weight: 900;
+    }
+
+    .pub-title,
+    .pub-venue_name {
+        color: $helsinki;
+    }
+    .pub-meta {
+        color: $gotland;
+        line-height: 1.8;
+        margin-bottom: 0;
+    }
+
+    .pub-meta, 
+    .pub-authors {
+        padding-left: 10px;
+        font-size: smaller;
+    }
+    .pub-authors {
+        margin-top: .65em;
+    }
+
+    .pub-date,
+    .pub-meta_special {
+        color: $tallinn;
+    }
+    .pub-meta_num {
+        color: $dainava;
+    }
+
+    .light & {
+        .pub-title,
+        .pub-venue_name {
+            color: $kihnu;
+        }
+        .pub-meta {
+            color: $gotland;
+        }
+    }
+}
+

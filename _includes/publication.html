@@ -1,0 +1,57 @@
+{% comment %}
+ Use this to list your own publications on your blog with standardized formatting.
+
+ Attributes: 
+  - title
+  - authors (comma-separated)
+  - venue   (of publication, e.g. journal or conference name)
+  - date    (of publication, arbitrary formatting)
+  - volume  (optional)
+  - number  (optional)
+  - pages   (optional)
+  - doi     (optional)
+  - link    (optional)
+
+    TODO: add code for link
+{% endcomment %}
+
+<div class="publication">
+    <p class="pub-title">
+        {%- if include.title -%}
+            <strong class="pub-title">{{include.title | escape}}</strong>.&nbsp;
+        {%- endif -%}
+    </p>
+    <p class="pub-meta">
+        {%- if include.date -%}
+            [<span class="pub-date">{{ include.date | escape }}</span>]&nbsp;
+        {%- endif -%}
+        <!-- <br/> -->
+        {%- if include.doi -%}[<span class="pub-meta_special">doi#:</span> <span class="pub-meta_doi">{{include.doi}}</span>]<br/>{%- endif -%}
+        {%- if include.venue -%}
+            <span class="pub-venue"><em class="pub-venue_name">{{include.venue | escape}}</em>
+            {%- if include.volume -%}, vol. <span class="pub-meta_num">{{ include.volume | escape }}</span>{%- endif -%}
+            {%- if include.number -%}, no. <span class="pub-meta_num">{{ include.number | escape }}</span>{%- endif -%}
+            {%- if include.pages -%}, pp. <span class="pub-meta_num">{{ include.pages | escape }}</span>{%- endif -%}
+            <!-- <br/> -->
+            <!-- {%- if include.doi -%}[<span class="pub-meta_special">doi#:</span> <span class="pub-meta_doi">{{include.doi}}</span>]{%- endif -%} -->
+            </span>
+        {%- endif -%}
+    </p>
+
+
+    {%- if include.authors -%}
+    {%- assign author_list = include.authors | split: "," -%}
+    <p class="pub-authors">
+        {%- for author in author_list -%}
+            {%- assign is_site_author = (author == site.author.name) | trim | default false -%}
+            {%- if forloop.last -%}&amp;{%- endif -%}
+            {%- if is_site_author %-}
+                <span class="pub-author pub-author_is-site-author">{{author | escape}}</span>
+            {%- else -%}
+                <span class="pub-author">{{author | escape}}</span>
+            {%- endif -%}
+            {%- if forloop.last == false -%}, {% else %}.{% endif -%}
+        {%- endfor -%}
+    </p> 
+    {%- endif -%}
+</div>

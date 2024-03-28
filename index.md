@@ -13,6 +13,31 @@ Baltic is a code-centric Jekyll theme, heavily inspired by the Nord color theme.
 
 ## *\_includes* Elements
 
+### Formatted **Publications**
+{%- include publication.html 
+    title="Towards Complete and Scalable Emulation of Quantum Algorithms on High-Performance Reconfigurable Computers"
+    venue="IEEE Transactions on Computers"
+    date="2023-08-01"
+    volume="72"
+    number="8"
+    pages="2350-2364"
+    doi="10.1109/TC.2023.3248276"
+    authors="Esam El-Araby, Naveed Mahmud, Mingyoung Joshua Jeng, Andrew MacGillivray, Manu Chaudhary, Md Alvir Islam Nobel, SM Ishraq Ul Islam, David Levy, Dylan Kneidel, Madeline R Watson, Jack G Bauer, Andrew E Riachi"
+    link="https://par.nsf.gov/servlets/purl/10415041"
+-%}
+
+{%- include publication.html 
+    title="Decoherence-Optimized Circuits for Multidimensional and Multilevel-Decomposable Quantum Wavelet Transform"
+    venue="IEEE Internet Computing"
+    date="2021-12-09"
+    volume="26"
+    number="1"
+    pages="15-25"
+    doi="10.1109/MIC.2021.3133845"
+    authors="Naveed Mahmud, Andrew MacGillivray, Manu Chaudhary, Esam El-Araby"
+    link="https://par.nsf.gov/servlets/purl/10334042"
+-%}
+
 ### Embeddable **Video**
 
 {%- include embed-video.html 
