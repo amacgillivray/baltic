@@ -192,5 +192,3 @@ class Game {
     }
 }
 ```
-
-![Up North](./header.jpg)
