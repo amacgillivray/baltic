@@ -1,4 +1,5 @@
 # Baltic
+[![Gem Version](https://badge.fury.io/rb/baltic.svg)](https://badge.fury.io/rb/baltic)
 
 Baltic is a Jekyll theme inspired by the popular Nord color theme. 
 
