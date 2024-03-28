@@ -162,3 +162,62 @@ hr {
     }
 }
 
+ul.link-list {
+    padding-left: 0;
+    margin-left: 0;
+    
+    li {
+        list-style: none;
+        margin: 5px 0;
+        
+        a {
+            color: $dainava;
+            transition: 0.2s;
+
+            &:hover {
+                color: $tallinn;
+            }
+        }
+    }
+}
+
+.baltic-footer {
+    display: block;
+    width: 100%;
+    // padding: $pad_h;
+
+    .copyright {
+        display: block;
+        padding: 10px $pad_h;
+        font-size: smaller;
+        background-color: $nord;
+        color: $body;
+
+        .symbol {
+            color: $helsinki;
+            font-weight: 700;
+        }
+    }
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 360px auto;
+    grid-column-gap: 4ch;
+    
+    background-color: $seafloor;
+
+    .light & {
+        background-color: $waves;
+    }
+
+    color: $nord_snow_med;
+    padding: 20px $pad_h;
+
+    font-size: small;
+
+    @media screen and (max-width: $break_800) {
+        grid-template-columns: auto;
+        grid-row-gap: 4ch;
+    }
+}
