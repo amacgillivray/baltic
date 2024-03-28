@@ -67,10 +67,6 @@ hr {
         }
     }
 
-    .header-nav {
-
-    }
-
     .header-nav-link {
         margin: 0 20px;
         font-weight: 500;
@@ -220,4 +216,16 @@ ul.link-list {
         grid-template-columns: auto;
         grid-row-gap: 4ch;
     }
+}
+
+.number {
+    color: $dainava;
+}
+
+.str-literal {
+    color: $gothenburg;
+}
+
+.class {
+    color: $gotland;
 }
