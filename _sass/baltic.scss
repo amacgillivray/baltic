@@ -82,6 +82,7 @@ hr {
 .content-area {
     display: block;
     max-width: calc(100vw - $pad_h);
+    min-height: 75vh;
     margin: 40px $pad_h;
 
     p {
