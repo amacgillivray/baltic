@@ -19,7 +19,7 @@ body {
     color: $body;
 
     &.light {
-        background-color: $nord_snow_med;
+        background-color: $nord_snow_light;
         color: $body_dark;
     }
 }
@@ -227,8 +227,34 @@ ul.link-list {
 
 .str-literal {
     color: $gothenburg;
+
+    .light & {
+        color: $gothenburg_dark;
+    }
+
+    @at-root a.str-literal {
+        text-decoration: underline;
+        transition: 0.2s;
+
+        &:hover {
+            color: $vilnius;
+        }
+    }
 }
 
 .class {
     color: $gotland;
+}
+
+.common {
+    color: $stockholm;
+
+    .light & {
+        color: $stockholm_dark;
+    }
+}
+
+.rare {
+    font-weight: 900;
+    color: $sarek;
 }
