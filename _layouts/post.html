@@ -1,0 +1,33 @@
+---
+layout: base
+---
+<article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+        {% comment %}
+        <!-- This started as a [] bracket style, testing JSON appearance -->
+        <p class="post-time" style="font-size: smaller;">
+            <time class="post-date post-date_published" datetime="{{page.date | date_to_xmlschema}}" itemprop="datePublished">
+                [<span class="rare">create_date</span>=<span class="number">{{page.date | date: "%Y-%m-%d"}}</span>]
+            </time>
+            {%- if page.modified_date -%} 
+                <time class="post-date post-date_modified" datetime="{{page.modified_date | date_to_xmlschema}}" itemprop="dateModified">
+                    [mdate#{{ page.modified_date | date: "%Y-%m-%d" }}]
+                </time>
+            {%- endif -%}
+            &nbsp;[<span class="rare">href</span>=<a class="post-permalink" href="{{page.url | absolute_url}}">{{page.url | relative_url}}</a>]
+        </p>
+        {% endcomment %}
+<pre class="json-meta">
+"<span class="common">date_created</span>": "<span class="str-literal">{{page.date | date: "%Y-%m-%d"}}</span>"
+{%- if page.modified_date %} 
+"date_modified": {{ page.modified_date | date: "%Y-%m-%d" }}
+{%- endif %}
+"<span class="common">permalink</span>": "<a class="str-literal" href="{{page.url | absolute_url}}">{{page.url | relative_url}}</a>"
+</pre>
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+        {{ content }}
+    </div>
+</article>

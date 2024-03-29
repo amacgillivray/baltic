@@ -258,3 +258,17 @@ ul.link-list {
     font-weight: 900;
     color: $sarek;
 }
+
+// Stylize post attributes to look like JSON
+.json-meta {
+    font-size: smaller;
+    padding: 10px;
+    border-radius: $border_radius;
+    max-width: 80ch;
+
+    background-color: $nord;
+
+    .light & {
+        background-color: $body;
+    }
+}
