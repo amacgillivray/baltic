@@ -45,8 +45,7 @@ Baltic is a code-centric Jekyll theme, heavily inspired by the Nord color theme.
     caption="An excursion in Muskoka.<br/> Add multiple sources with comma separators.<br/>Leave caption empty to omit." -%}
 
 {%- include embed-video.html 
-    source_list="https://i.imgur.com/LWizlJu.mp4" 
-    caption="" -%}
+    source_list="https://i.imgur.com/LWizlJu.mp4" -%}
 
 ### Captioned **Images** 
 

@@ -6,7 +6,7 @@
         <source src="{{ source | uri_escape }}" type="">
     {%- endfor -%}
     </video>
-    {%- if include.caption != "" -%}
+    {%- if include.caption -%}
     <figcaption>
         {{include.caption}}
     </figcaption>

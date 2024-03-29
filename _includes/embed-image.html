@@ -1,7 +1,7 @@
 
 <figure class="image">
     <img src="{{include.source | uri_escape }}" alt="{{include.caption | escape}}"/>
-    {%- if include.caption != "" -%}
+    {%- if include.caption -%}
     <figcaption>
         {{include.caption}}
     </figcaption>
