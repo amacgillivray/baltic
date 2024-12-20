@@ -6,6 +6,7 @@
 
 html {
     font-family: "Jetbrains Mono", "Courier New", monospace;
+    background-color: $deep;
 }
 
 html, 
@@ -15,12 +16,14 @@ body {
 }
 
 body {
-    background-color: $waves;
+    background-color: $nord;
     color: $body;
 
-    &.light {
-        background-color: $nord_snow_light;
-        color: $body_dark;
+    @media (prefers-color-scheme: light) {
+        &.light {
+            background-color: $nord_snow_light;
+            color: $body_dark;
+        }
     }
 }
 
@@ -39,6 +42,12 @@ strong {
 
 a {
     text-decoration: none;
+    color: $tallinn;
+
+    &:hover{ 
+        transition: 0.2s;
+        color: $riga;
+    }
 }
 
 hr {
@@ -54,8 +63,8 @@ hr {
     display: grid;
     grid-template-columns: auto auto;
     padding: 40px $pad_h;
-    background-color: $baltic;
-    border-bottom:4px solid #222d36;
+    background-color: $header;
+    // border-bottom:4px solid #222d36;
 
     .header-title-link {
         font-weight: 700;
@@ -181,13 +190,13 @@ hr {
     }
 
     @media (prefers-color-scheme: light) {
-    .light & {
-        .pub-title,
-        .pub-venue_name {
-            color: $kihnu;
-        }
-        .pub-meta {
-            color: $gotland;
+        .light & {
+            .pub-title,
+            .pub-venue_name {
+                color: $kihnu;
+            }
+            .pub-meta {
+                color: $gotland;
             }
         }
     }
@@ -221,12 +230,16 @@ ul.link-list {
         display: block;
         padding: 10px $pad_h;
         font-size: smaller;
-        background-color: $nord;
+        background-color: $shallow;
         color: $body;
 
         .symbol {
             color: $helsinki;
             font-weight: 700;
+        }
+
+        .light & {
+            background-color: $nord;
         }
     }
 }
@@ -236,10 +249,12 @@ ul.link-list {
     grid-template-columns: 360px auto;
     grid-column-gap: 4ch;
     
-    background-color: $seafloor;
+    background-color: $deep;
 
-    .light & {
-        background-color: $waves;
+    @media (prefers-color-scheme: light) {
+        .light & {
+            background-color: $squall;
+        }
     }
 
     color: $nord_snow_med;
@@ -260,8 +275,10 @@ ul.link-list {
 .str-literal {
     color: $gothenburg;
 
-    .light & {
-        color: $gothenburg_dark;
+    @media (prefers-color-scheme: light) {
+        .light & {
+            color: $gothenburg_dark;
+        }
     }
 
     @at-root a.str-literal {
@@ -281,8 +298,10 @@ ul.link-list {
 .common {
     color: $stockholm;
 
-    .light & {
-        color: $stockholm_dark;
+    @media (prefers-color-scheme: light) {
+        .light & {
+            color: $stockholm_dark;
+        }
     }
 }
 
@@ -300,7 +319,9 @@ ul.link-list {
 
     background-color: $nord;
 
-    .light & {
-        background-color: $body;
+    @media (prefers-color-scheme: light) {
+        .light & {
+            background-color: $body;
+        }
     }
 }
