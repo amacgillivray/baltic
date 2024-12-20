@@ -1,6 +1,7 @@
 .highlight {
 
-    background-color: $nord;
+
+
     color: $body;
     border-radius: 12px;
     padding: 10px;
@@ -8,6 +9,14 @@
     max-width: 90ch;
     overflow-x:scroll;
     margin: 20px 0;
+
+    background-color: $deep;
+
+    @media (prefers-color-scheme: light) {
+        .light & {
+            background-color: $nord;
+        }
+    }
 
     .hll {
         background-color: $waves;
@@ -78,6 +87,10 @@
     .vg,
     .vi,
     .vm {
+        color: $nord_snow_med;
+    }
+
+    .nd, .kn {
         color: $sarek;
     }
     
