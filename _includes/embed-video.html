@@ -1,6 +1,20 @@
+{% comment %}
+ Use this to embed videos and leverage the built-in classes. 
+ You can also write your own HTML structure and refer to this file for classes! 
+
+ Attributes: 
+  - source_list (comma-separated)
+    Each source should be the same video, but in another encoding.
+    Order the list in the preferred fallback order.
+    See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source
+  - caption (optional)
+
+ TODO: Support types for each encoding provided,
+       Give better support for video tag attrs (muted, controls, autoplay)
+{% endcomment%}
 
 <figure class="video">
-    <video controls>
+    <video muted controls>
     {%- assign sources = include.source_list | split: "," -%}
     {%- for source in sources -%}
         <source src="{{ source | uri_escape }}" type="">
