@@ -2,15 +2,37 @@
  Use this to list your own publications on your blog with standardized formatting.
 
  Attributes: 
-  - title
+
+ - title
+
   - authors (comma-separated)
-  - venue   (of publication, e.g. journal or conference name)
-  - date    (of publication, arbitrary formatting)
+    Prefixed with "By". The last author in the list will be prefixed with "&".
+
+  - venue   
+    For example, a journal or conference name.
+
+  - date    (optional)
+    Date of publication. 
+  
   - volume  (optional)
+    Volume number for the venue, if applicable
+
   - number  (optional)
+    Issue number, if applicable
+
   - pages   (optional)
+    Pages where the publication appears, if applicable.
+
   - doi     (optional)
+    The Digital Object Identifier, if applicable.
+
   - link    (optional)
+    Link to the publication (document, abstract, etc).
+  - link_text (optional)
+    Only used when link is provided. When set, this will display instead of the raw URL.
+
+  - summary (optional)
+    Summary, explanation, abstract, etc. Displays below authors. 
 
     TODO: add code for link
 {% endcomment %}
@@ -22,10 +44,20 @@
         {%- endif -%}
     </p>
     <p class="pub-meta">
-        {%- if include.date -%}
-            [<span class="pub-date">{{ include.date | escape }}</span>]&nbsp;
+        
+        {% comment %}
+        {%- if include.link -%}
+        {%- if include.linktxt -%}
+            {%- assign ltxt = include.linktxt -%}
+        {%- else -%}
+            {%- assign ltxt = include.link -%}
         {%- endif -%}
-        {%- if include.doi -%}[<span class="pub-meta_special">doi#:</span> <span class="pub-meta_doi">{{include.doi}}</span>]<br/>{%- endif -%}
+        <span class="pub-link">
+            [<a class="pub-link-anchor" href="{{ include.link | uri_escape }}" target="_blank">{{ ltxt | uri_escape }}</a>]
+        </span>
+        {%- endif -%}
+        {% endcomment %}
+
         {%- if include.venue -%}
             <span class="pub-venue"><em class="pub-venue_name">{{include.venue | escape}}</em>
             {%- if include.volume -%}, vol. <span class="pub-meta_num">{{ include.volume | escape }}</span>{%- endif -%}
@@ -34,15 +66,48 @@
             </span>
         {%- endif -%}
     </p>
+    <p class="pub-meta">
+        {%- if include.link -%}
+        {%- if include.link_text -%}
+            {%- assign ltxt = include.link_text -%}
+        {%- else -%}
+            {%- assign ltxt = include.link -%}
+        {%- endif -%}
+        <span class="pub-link">[<a class="pub-link-anchor" href="{{ include.link | uri_escape }}" target="_blank">{{ ltxt | uri_escape }}</a>]</span>&nbsp;
+        {%- endif -%}
 
+        {%- if include.date -%}
+        [<span class="pub-date">{{ include.date | escape }}</span>]&nbsp;
+        {%- endif -%}
+
+        {%- if include.doi -%}
+            [<span class="pub-meta_special">doi#:</span><span class="pub-meta_doi">{{include.doi}}</span>]&nbsp;
+        {%- endif -%}
+    </p>
+    
+    {% comment %}
+    {%- if include.link -%}
+    {%- if include.linktxt -%}
+        {%- assign ltxt = include.linktxt -%}
+    {%- else -%}
+        {%- assign ltxt = include.link -%}
+    {%- endif -%}
+    <p class="pub-meta pub-link">
+        [<a class="pub-link-anchor" href="{{ include.link | uri_escape }}" target="_blank">
+            {{ ltxt | uri_escape }}
+        </a>]
+    </p>
+    {%- endif -%}
+    {% endcomment %}
 
     {%- if include.authors -%}
     {%- assign author_list = include.authors | split: "," -%}
     <p class="pub-authors">
+        {% comment %}<b>Authors:</b>&nbsp;{% endcomment %}
         {%- for author in author_list -%}
             {%- assign author_comp = author | strip -%}
             {%- assign author_site = site.author.name | strip -%}
-            {%- if forloop.last -%}&amp;{%- endif -%}
+            {%- if forloop.last and forloop.last != forloop.first -%}&amp;{%- endif -%}
             {%- if author_comp == author_site -%}
                 <span class="pub-author pub-author_is-site-author">{{author | escape}}</span>
             {%- else -%}
@@ -51,5 +116,8 @@
             {%- if forloop.last == false -%}, {% else %}.{% endif -%}
         {%- endfor -%}
     </p> 
+    {%- endif -%}
+    {%- if include.summary -%}
+    <p class="pub-summary">{{ include.summary | escape }}</p>
     {%- endif -%}
 </div>

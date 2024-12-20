@@ -113,14 +113,20 @@ hr {
 
 .publication {
     font-size: smaller;
+    margin-bottom: 20px;
 
     .pub-title,
     .pub-date,
     .pub-meta_special,
     .pub-venue_name,
     .pub-meta-num,
-    .pub-author_is-site-author {
+    .pub-author_is-site-author,
+    .pub-link-anchor {
         font-weight: 900;
+    }
+
+    .pub-title {
+        margin-bottom: 4px;
     }
 
     .pub-title,
@@ -130,15 +136,18 @@ hr {
     .pub-meta {
         color: $gotland;
         line-height: 1.8;
+        margin-top: 0;
         margin-bottom: 0;
     }
 
     .pub-meta, 
-    .pub-authors {
+    .pub-authors,
+    .pub-summary {
         padding-left: 10px;
         font-size: smaller;
     }
-    .pub-authors {
+    .pub-authors,
+    .pub-summary {
         margin-top: .65em;
     }
 
@@ -150,6 +159,28 @@ hr {
         color: $dainava;
     }
 
+    .pub-authors {
+        margin-top: 2px;
+        color: $gotland;
+    }
+
+    .pub-meta + .pub-meta {
+        margin-top: 2px;
+    }
+
+    .pub-link-anchor {
+        color: $dainava;
+        &:hover {
+            color: $riga;
+        }
+    }
+
+    .pub-summary {
+        padding-left: 20px;
+        font-size: 10px;
+    }
+
+    @media (prefers-color-scheme: light) {
     .light & {
         .pub-title,
         .pub-venue_name {
@@ -157,6 +188,7 @@ hr {
         }
         .pub-meta {
             color: $gotland;
+            }
         }
     }
 }
