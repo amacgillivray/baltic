@@ -237,9 +237,11 @@ ul.link-list {
             color: $helsinki;
             font-weight: 700;
         }
-
-        .light & {
-            background-color: $nord;
+        
+        @media (prefers-color-scheme: light) {
+            .light & {
+                background-color: $nord;
+            }
         }
     }
 }
