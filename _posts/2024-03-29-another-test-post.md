@@ -1,6 +1,7 @@
 ---
 title: Another Test Post
 layout: post
+authors: Alice, Bob, Eve
 ---
 
 ## My Adventures in the Wilderness
@@ -13,7 +14,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in faucibus dui. 
 
 Quisque aliquam libero sed est suscipit iaculis. Nulla at arcu et magna bibendum finibus. Cras tristique facilisis nibh, eu sagittis odio fringilla a. Nam quis purus nunc. Proin convallis nunc sit amet purus tempus mattis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla lorem velit, luctus eu dapibus id, viverra et libero. Ut gravida, nisi sit amet finibus finibus, ante est gravida augue, id malesuada mauris nisi sit amet tellus. Nulla malesuada, nibh quis hendrerit facilisis, dolor orci tristique metus, nec feugiat velit enim non erat. Nam elit neque, tincidunt eget arcu et, mattis dictum odio. Donec pharetra orci sit amet ipsum tincidunt dapibus. Praesent ac est non urna iaculis egestas. Morbi ut mauris nibh. Vivamus eget vehicula erat.
 
-## It's always <span class="class">uphill</span> and <br/> ***the <span class="str-literal">mosquitoes</span> will eat you alive***
+## It's always <span class="class">*uphill*</span> and the <br/><span class="str-literal">*mosquitoes*</span> will eat you alive
 
 In id eros quis lacus sollicitudin porta a ac enim. Donec vitae diam odio. Aenean viverra odio vel elementum lobortis. Pellentesque nec convallis nunc, in sollicitudin leo. Integer non porta erat, hendrerit fringilla dolor. Nulla rutrum rhoncus massa, commodo porta nisl facilisis ac. Phasellus leo justo, tincidunt id imperdiet ut, interdum ut ipsum. Integer pretium lorem dui, in egestas sapien mattis at. Quisque in risus eleifend, malesuada leo non, placerat turpis. Vivamus imperdiet leo diam, a tincidunt risus pharetra sit amet. Nulla sit amet mi sit amet tellus fringilla bibendum non quis lorem. Sed molestie tincidunt ex in suscipit.
 
