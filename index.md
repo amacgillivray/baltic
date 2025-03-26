@@ -126,6 +126,45 @@ class Game {
 }
 ```
 
+--- 
+
+## Math Support (MathJax)
+
+[Mathjax](https://www.mathjax.org/) is imported by default to render LaTeX-style markup. 
+Note that "`\\`" line breaks [are not supported](https://github.com/mathjax/MathJax/issues/2312) in the current version of mathjax. To disable the Mathjax script, remove or change the `math_engine` setting in _config.yml.
+
+Write this: 
+
+```tex
+% $$ to start a block
+P = \{ \space n \in \mathbb{N} \space | \space n =\sum_{d|n,\space d\neq n} d \space \}
+% $$ to end
+
+% $$
+\text{If } \boldsymbol{2^{p+1}-1} \text{ is prime, then } \boldsymbol{2^p(2^{p+1}-1)} \text{ is perfect.}
+% $$ 
+
+Inline math: \\( (n^{2})\times 10 \\) is also supported.
+%           [ ^ ] start          [ ^ ] end
+%
+% that is, use "\\(" and "\\)" to delimit the start and end of inline blocks.
+%
+% Double dollar-signs $$ also work for inline blocks.
+% The commonly used single-$ does not.
+```
+
+Render this:
+
+$$
+P = \{ \space n \in \mathbb{N} \space | \space n =\sum_{d|n,\space d\neq n} d \space \}
+$$
+
+$$
+\text{If } \boldsymbol{2^{p+1}-1} \text{ is prime, then } \boldsymbol{2^p(2^{p+1}-1)} \text{ is perfect.}
+$$
+
+Inline math: $$ (n^{2})\times 10 $$ is also supported. 
+
 
 ---
 
