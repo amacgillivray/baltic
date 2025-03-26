@@ -327,3 +327,21 @@ ul.link-list {
         }
     }
 }
+
+.content-area {
+    p {
+        margin: 1rem 0;
+        line-height: 1.25rem;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        + p {
+            margin-top: 0.83rem;
+        }
+    }
+}
+
+.publication.blog-post {
+    margin: 2rem 0;
+}
+
